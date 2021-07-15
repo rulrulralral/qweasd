@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>0714hard</title>
+<style>
+    .done {
+        color: grey;
+        text-decoration: line-through;
+    }
+</style>
+</head>
+
+<body>
+    <input type="text">
+    <button type="button" class="add-button">추가하기</button>
+    <ul>
+
+    </ul>
+    <script>
+        const button = document.querySelector('.add-button');
+        // 버튼에 접근하면 위에서 만든 add-button에 접근한다. 
+        button.addEventListener("click", function () {
+            //addevnetlistner => 이벤트 헨들러를 등록하는 함수 (클릭하면, 이것을 하겠다.)
+            const input = document.querySelector('input');
+            // input이라는 변수에  input 값을 넣어준 것 
+            cosole.dir(input.value);
+            // 콘솔의 입력 값을 나타낸다.
+            const li = document.createElement("li");
+            // li 라는 변수에 = li 태그를 만들어 넣음
+            const p = document.createElement("p");
+            // p 라는 변수에 = p 태그를 만들어 넣음
+            const button = documen.createElement("button");
+            // button 이라는 변수에 button을 만들어 넣음
+            p.textcontent = input.value;
+            // textcontent input값을 p값을 입력하는 것
+            bottion.textcontent = '완료'
+            // 버튼에 완료라는 모양을 표시한다
+            li.appendChild(p);
+            //li 자식에 p를 추가한다    
+            li.appendChild(button);
+            // li 자식에 버튼을 추가한다. 
+            console.log(li);
+            // li를 출력한다.
+            // const 이 어떤것에 접근한다는 의미
+
+            const ul = document.querySelector("ul")
+            // ul껍데기에 진짜 ul을 넣어주는 것 
+            ul.appendChild(li)
+            //ul 자식에 li를 추가한다.
+
+
+        })
+        // 버튼 호출하기  
+        console.log(button)
+        // printf 랑 같은 의미를 가진다.
+        console.dir(button)
+        // printf 랑
+
+        p.addEventListener("click", function () {
+            p.classList.toggle('.done');
+            //  toggle 은 추가,삭제를 해주는 명령어 
+
+
+        })
+    </script>
+</body>
+
+</html>
